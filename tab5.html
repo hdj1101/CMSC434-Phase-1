@@ -4,12 +4,32 @@
     <title>Tab 5</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=640, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles5.css"> 
 </head>
 <body>
-    <div class="container">
+    <div class="screen-container">
         <div class="content">
             <p> Tab 5 </p> <!-- WRITE HERE -->
+
+            <p class="question-text">Do you like Computer Science?</p>
+            <label><input type="radio" name="cs" value="yes"> Yes</label>
+            <label><input type="radio" name="cs" value="no"> No</label>
+
+            <p class="question-text">Do you like Computer Science?</p>
+            <select id="shower">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7+">7+</option>
+            </select>
+
+            <br><br>
+            <button onclick="calculateAura()">Show Results</button>
+            <p id="result"></p>
         </div>
 
         <div class="image-container">
@@ -52,5 +72,40 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function calculateAura() {
+            let score = 0;
+
+            // Check CS preference
+            let csPreference = document.querySelector('input[name="cs"]:checked');
+            if (csPreference && csPreference.value === "yes") {
+                score += 300;
+            }
+
+            // Get shower frequency
+            let showerValue = document.getElementById("shower").value;
+            if (showerValue === "7+") {
+                score += 700;
+            } else {
+                score += parseInt(showerValue) * 100;
+            }
+
+            // Determine aura message
+            let resultText = "";
+            if (score <= 200) {
+                resultText = "You have no aura";
+            } else if (score <= 500) {
+                resultText = "You have some aura";
+            } else if (score <= 800) {
+                resultText = "You have a lot of aura";
+            } else {
+                resultText = "You have <span class ='infinite-text'>INFINITE</span> aura";
+            }
+
+            // Display result
+            document.getElementById("result").innerHTML = resultText;
+        }
+    </script>
 </body>
 </html>

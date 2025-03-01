@@ -23,6 +23,20 @@ html, body {
     position: relative;
 }
 
+.question-text {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+}
+
+.infinite-text {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+    color: #ffbb00;
+}
+
 .image-container {
     display: flex;
     justify-content: space-around;
