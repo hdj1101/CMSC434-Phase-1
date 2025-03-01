@@ -1,0 +1,81 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content {
+    text-align: center;
+    margin-top: 50px;
+    flex-grow: 1; /* Using this to push image container down (Please mess with it as you see fit it's a quick fix) */
+}
+
+.container {
+    width: 640px;
+    height: 960px;
+    background-color: lightblue;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightpink; /* Background color for the image section */
+    padding: 0 0;
+    position: relative;
+}
+
+.image-item {
+    text-align: center;
+    position: relative;
+}
+
+/* Image styling */
+.image-item img {
+    width: 107px; /* Change the image size */
+    height: auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.alt-text {
+    margin-top: 5px;
+    color: black; /* Change the text color */
+    font-size: 14px;
+    font-weight: bold; /* Change the text weight */
+    font-family: 'Arial', sans-serif; /* Change the text font */
+    margin: 0;
+}
+
+.image-item a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Change the color/transparency */
+    display: none; /* Initially hidden */
+}
+
+.image-item.active .overlay {
+    display: block; /* Show overlay when image item is active */
+}
+
+/* Prevent content from expanding beyond the screen size */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
