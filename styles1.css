@@ -14,7 +14,7 @@ html::-webkit-scrollbar{
 
 .scroll-div{
     width: 640px;
-    max-height: 500px;
+    max-height: 835px;
     overflow: hidden;
     overflow-y: scroll;
     margin: 0;
