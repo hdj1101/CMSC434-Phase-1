@@ -17,6 +17,7 @@ html::-webkit-scrollbar{
     max-height: 500px;
     overflow: hidden;
     overflow-y: scroll;
+    margin: 0;
 }
 
 /*SCROLL TEXT FONT SIZE*/
