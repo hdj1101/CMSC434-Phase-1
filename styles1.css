@@ -4,7 +4,7 @@ html, body {
     padding: 0;
     width: 100%;
     overflow: hidden;
-    scrollbar-width: normal;
+    scrollbar-width: auto;
     /*scrollbar-color: #777 #2b2727;*/
 }
 
@@ -14,7 +14,7 @@ html::-webkit-scrollbar{
 
 .scroll-div{
     width: 640px;
-    height: 820px;
+    max-height: 500px;
     overflow: hidden;
     overflow-y: scroll;
 }
@@ -63,7 +63,7 @@ html::-webkit-scrollbar{
 }
 
 .alt-text {
-    margin-top: 5px;
+    margin-top: auto;
     color: black; /* Change the text color */
     font-size: 14px;
     font-weight: bold; /* Change the text weight */
