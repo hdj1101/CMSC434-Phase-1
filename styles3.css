@@ -9,12 +9,13 @@ html, body {
 .content {
     text-align: center;
     margin-top: 50px;
-    flex-grow: 1; /* Using this to push image container down (Please mess with it as you see fit it's a quick fix) */
+    flex-grow: 1;
 }
 
 .container {
     width: 640px;
-    height: 960px;
+    height: 100%;
+    max-height: 960px;
     background-color: lightblue;
     margin: 0 auto;
     display: flex;
@@ -38,7 +39,7 @@ html, body {
 
 /* Image styling */
 .image-item img {
-    width: 107px; /* Change the image size */
+    width: 70px; /* Change the image size */
     height: auto;
     cursor: pointer;
     position: relative;
@@ -73,7 +74,30 @@ html, body {
     display: block; /* Show overlay when image item is active */
 }
 
-/* Prevent content from expanding beyond the screen size */
+.line1 {
+    color: yellow;
+    background-color: black;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.line2 {
+    color: purple;
+    background-color: yellow;
+    padding: 10px;
+    font-size: 20px;
+    margin: 0;
+}
+
+h1 {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    margin: 0;
+    font-size: 36px;
+}
+
 body {
     display: flex;
     flex-direction: column;
